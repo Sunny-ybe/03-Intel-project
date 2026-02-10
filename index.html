@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="l">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -148,6 +148,51 @@
       </p>
     </div>
 </section>
+<section class="container my-5">
+  <div class="row text-center">
+    
+    <div class="col-md-4 mb-4">
+      <h3>
+        <i class="bi bi-cpu" aria-hidden="true"></i>
+        Innovation
+      </h3>
+      <p>
+        Intel drives global innovation through advanced semiconductor technology.
+      </p>
+      <a href="#" class="btn btn-outline-primary">
+        Learn More
+      </a>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <h3>
+        <i class="bi bi-globe" aria-hidden="true"></i>
+        Sustainability
+      </h3>
+      <p>
+        Intel is committed to sustainable manufacturing and energy efficiency.
+      </p>
+      <a href="#" class="btn btn-outline-primary">
+        Learn More
+      </a>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <h3>
+        <i class="bi bi-people" aria-hidden="true"></i>
+        Global Impact
+      </h3>
+      <p>
+        Intel supports communities and partners worldwide.
+      </p>
+      <a href="#" class="btn btn-outline-primary">
+        Learn More
+      </a>
+    </div>
+
+  </div>
+</section>
+
     <!-- Learn More Section -->
 <section class="learn-more">
   <h2>Learn More About Intel</h2>
@@ -159,9 +204,74 @@
     Learn more about Intel
   </a>
 </section>
+<section class="container my-5">
+  <h2 class="text-center mb-4">Subscribe to Our Sustainability Newsletter</h2>
+
+  <form class="row justify-content-center" aria-label="Newsletter subscription form">
+    <div class="col-md-6">
+      <label for="email" class="form-label">Email address</label>
+      <input
+        type="email"
+        id="email"
+        class="form-control"
+        placeholder="name@example.com"
+        required
+        aria-required="true"
+      />
+      <button type="submit" class="btn btn-primary mt-3 w-100">
+        Subscribe
+      </button>
+    </div>
+  </form>
+</section>
+<section class="container my-5">
+  <div class="accordion" id="intelAccordion">
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+          Why RTL Support Matters
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show">
+        <div class="accordion-body">
+          RTL support ensures usability for global audiences.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="bg-light text-center py-4 mt-5">
+  <p class="mb-1">&copy; 2026 Intel Corporation</p>
+  <nav aria-label="Footer navigation">
+    <a href="#" class="mx-2">Privacy Policy</a>
+    <a href="#" class="mx-2">Terms of Use</a>
+    <a href="#" class="mx-2">Contact</a>
+  </nav>
+</footer>
+<script>
+  function updateDirection() {
+    const rtlLanguages = ['ar', 'he', 'fa', 'ur'];
+    const html = document.documentElement;
+    const lang = html.lang || navigator.language;
+
+    if (rtlLanguages.some(code => lang.startsWith(code))) {
+      html.setAttribute('dir', 'rtl');
+    } else {
+      html.setAttribute('dir', 'ltr');
+    }
+  }
+
+  updateDirection();
+  setInterval(updateDirection, 1000);
+</script>
+
 
 
   <p>Click on the link to go to intel's official website.</p>
+
 
 </body>
 </html>
